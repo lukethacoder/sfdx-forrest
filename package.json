@@ -6,8 +6,7 @@
     "ns": "npx babel-node scripts/index.js",
     "ns:push": "npx babel-node scripts/push-to-sf.js",
     "ns:split": "npx babel-node scripts/split-the-json.js",
-    "ns:rm-export": "rm -rf ./scripts/exports",
-    "clean": "rm -rf dist .cache"
+    "ns:rm": "rm -rf ./scripts/exports"
   },
   "dependencies": {
     "@babel/cli": "^7.8.4",

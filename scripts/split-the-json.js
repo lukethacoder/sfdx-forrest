@@ -17,31 +17,34 @@ const chunky = chunk(data_raw, env.CHUNK_BY_X_RECORDS)
 chunky.forEach((xAmountOfRecords, key) => {
   // write the json records data
   writeJson(
-    path.resolve(__dirname, `${env.NAMESPACE}-${key}.json`),
+    path.resolve(__dirname, `${env.NAMESPACE}/${env.SF_OBJECT}-${key}.json`),
     { records: xAmountOfRecords },
     function(err) {
       if (err) {
         return log(err)
       }
-      log(chalk.green(`${env.NAMESPACE}-${key}.json file was saved!`))
+      log(chalk.green(`${env.SF_OBJECT}-${key}.json file was saved!`))
     }
   )
   // write the json plan data
   writeJson(
-    path.resolve(__dirname, `${env.NAMESPACE}-${key}-plan.json`),
+    path.resolve(
+      __dirname,
+      `plan-${env.NAMESPACE}/${env.SF_OBJECT}-${key}.json`
+    ),
     [
       {
-        sobject: 'Stock__c',
+        sobject: env.SF_OBJECT,
         saveRefs: true,
         resolveRefs: false,
-        files: [`${env.NAMESPACE}-${key}.json`],
+        files: [`${env.SF_OBJECT}-${key}.json`],
       },
     ],
     function(err) {
       if (err) {
         return log(err)
       }
-      log(chalk.green(`${env.NAMESPACE}-${key}.json file was saved!`))
+      log(chalk.green(`${env.SF_OBJECT}-${key}.json file was saved!`))
     }
   )
 })
