@@ -1,0 +1,23 @@
+{
+  "name": "sfdx-forrest",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "ns": "npx babel-node scripts/index.js",
+    "ns:push": "npx babel-node scripts/push-to-sf.js",
+    "ns:split": "npx babel-node scripts/split-the-json.js",
+    "ns:rm-export": "rm -rf ./scripts/exports",
+    "clean": "rm -rf dist .cache"
+  },
+  "dependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.6",
+    "@babel/node": "^7.8.4",
+    "@babel/parser": "^7.8.6",
+    "@babel/preset-env": "^7.8.4",
+    "chalk": "^3.0.0",
+    "envalid": "^6.0.1",
+    "fs-extra": "^8.1.0",
+    "shelljs": "^0.8.3"
+  }
+}
