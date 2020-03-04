@@ -1,5 +1,11 @@
 #!/usr/bin/env node
-import path from 'path'
-import { writeFile, readFile, writeJson, readFileSync } from 'fs-extra'
 import chalk from 'chalk'
-import shell from 'shelljs'
+import { log } from './helpers'
+
+// TODO:
+
+log(
+  chalk.red(
+    'Oooops, it looks like the dev hasnt build out this script just yet.'
+  )
+)

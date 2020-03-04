@@ -4,9 +4,10 @@
   "license": "MIT",
   "scripts": {
     "ns": "npx babel-node scripts/index.js",
-    "ns:push": "npx babel-node scripts/push-to-sf.js",
+    "ns:pull": "npx babel-node scripts/pull-from-sf.js",
     "ns:split": "npx babel-node scripts/split-the-json.js",
-    "ns:rm": "rm -rf ./scripts/exports"
+    "ns:push": "npx babel-node scripts/push-to-sf.js",
+    "ns:rm": "npx babel-node scripts/clean.js"
   },
   "dependencies": {
     "@babel/cli": "^7.8.4",
