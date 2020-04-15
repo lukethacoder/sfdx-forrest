@@ -1,8 +1,0 @@
-{
-  "fields": [
-    "Id",
-    "Name",
-    "RecordType.Name",
-    "RecordType.DeveloperName"
-  ]
-}

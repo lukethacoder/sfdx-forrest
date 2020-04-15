@@ -6,4 +6,5 @@ export const env = envalid.cleanEnv(process.env, {
   SF_OBJECT: str(),
   CHUNK_BY_X_RECORDS: num(),
   NAMESPACE: str(),
+  CUSTOM_SQL_QUERY: str(),
 })
